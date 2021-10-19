@@ -5,25 +5,26 @@ public class ROBOT_CLASS {
 	private int x;
 	private int y;
 	private int sens;
-	private ROBOT_CLASS[] listeRobot;
+	private String reponse;
+
 	
 	public ROBOT_CLASS(String nom, int x, int y, int sens) {
 		this.nom = nom; 
 		this.x = x;
 		this.y = y;
 		this.sens = sens;
-		this.listeRobot = null;
+
 	}
 	
-	//Constructeur par défaut 1
+	//Constructeur par dÃ©faut 1
 	public ROBOT_CLASS() {
-		this.nom = " \"par défaut\" ";
+		this.nom = " \"par dï¿½faut\" ";
 		this.x = 0;
 		this.y = 1;
 		this.sens = 2;
 	}
 	
-	//Constructeur par défaut 2
+	//Constructeur par dÃ©faut 2
 	public ROBOT_CLASS(String nom) {
 		this.nom = nom;
 		this.x = 1;
@@ -47,9 +48,8 @@ public class ROBOT_CLASS {
 	}
 		
 	public void afficheRobot() {
-		System.out.println("Le Robot " + this.nom + " est de coordonnées : " + "(" + this.x + " , " + this.y + ")" );
+		System.out.println("Le Robot " + this.nom + " est de coordonnï¿½es : " + "(" + this.x + " , " + this.y + ")" );
 		System.out.println("Son Orientation : " + this.sens);
-		System.out.println("Voulez vous éssayer autre chose ?");
 		Scanner sc = new Scanner(System.in);
 	}
 	
@@ -57,20 +57,20 @@ public class ROBOT_CLASS {
 		this.sens=(this.sens + 1) % 4;
 		switch (this.sens) { 
 		case 0: 
-			System.out.println("Le Robot a tourné de l'Ouest vers le NORD.");
-			System.out.println("Désormais, lOrientation est NORD");
+			System.out.println("Le Robot a tournï¿½ de l'Ouest vers le NORD.");
+			System.out.println("Dï¿½sormais, lOrientation est NORD");
 		break;
 		case 1: 
-			System.out.println("Le Robot a tourné du Nord vers l'EST.");
-			System.out.println("Désormais, lOrientation est EST");
+			System.out.println("Le Robot a tournï¿½ du Nord vers l'EST.");
+			System.out.println("Dï¿½sormais, lOrientation est EST");
 		break;
 		case 2: 
-			System.out.println("Le Robot a tourné de l'Est vers le SUD.");
-			System.out.println("Désormais, lOrientation est SUD");
+			System.out.println("Le Robot a tournï¿½ de l'Est vers le SUD.");
+			System.out.println("Dï¿½sormais, lOrientation est SUD");
 		break;
 		case 3: 
-			System.out.println("Le Robot a tourné du Sud vers l'OUEST.");
-			System.out.println("Désormais, lOrientation est OUEST");
+			System.out.println("Le Robot a tournï¿½ du Sud vers l'OUEST.");
+			System.out.println("Dï¿½sormais, lOrientation est OUEST");
 		default :
 		System.out.println("Votre saisie est incorrecte !!!!");
 		}
@@ -80,23 +80,23 @@ public class ROBOT_CLASS {
 		switch (this.sens) { 
 		case 0: 
 			this.y = this.y + 1;
-			System.out.println("Le Robot a avancé une fois vers le NORD.");
-			System.out.println("Le Robot " + this.nom + " est de coordonnées : " + "(" + this.x + " , " + this.y  + ")" );
+			System.out.println("Le Robot a avancï¿½ une fois vers le NORD.");
+			System.out.println("Le Robot " + this.nom + " est de coordonnï¿½es : " + "(" + this.x + " , " + this.y  + ")" );
 		break;
 		case 1: 
 			this.x = this.x + 1;
-			System.out.println("Le Robot a avancé une fois vers l'EST.");
-			System.out.println("Le Robot " + this.nom + " est de coordonnées : " + "(" + this.x + " , " + this.y  + ")" );
+			System.out.println("Le Robot a avancï¿½ une fois vers l'EST.");
+			System.out.println("Le Robot " + this.nom + " est de coordonnï¿½es : " + "(" + this.x + " , " + this.y  + ")" );
 		break;
 		case 2: 
 			this.y = this.y - 1;
-			System.out.println("Le Robot a avancé une fois vers le SUD.");
-			System.out.println("Le Robot " + this.nom + " est de coordonnées : " + "(" + this.x + " , " + this.y  + ")" );
+			System.out.println("Le Robot a avancï¿½ une fois vers le SUD.");
+			System.out.println("Le Robot " + this.nom + " est de coordonnï¿½es : " + "(" + this.x + " , " + this.y  + ")" );
 		break;
 		case 3: 
 			this.x = this.x - 1;
-			System.out.println("Le Robot a avancé une fois vers l'OUEST.");
-			System.out.println("Le Robot " + this.nom + " est de coordonnées : " + "(" + this.x  + " , " + this.y +1  + ")" );
+			System.out.println("Le Robot a avancï¿½ une fois vers l'OUEST.");
+			System.out.println("Le Robot " + this.nom + " est de coordonnï¿½es : " + "(" + this.x  + " , " + this.y +1  + ")" );
 		default :
 		System.out.println("Votre saisie est incorrecte !!!!");
 		}
@@ -106,19 +106,19 @@ public class ROBOT_CLASS {
 			switch (this.sens) { 
 			case 0: 
 				this.y = this.y - 1;
-				System.out.println("Le Robot a reculé une fois vers le NORD.");
+				System.out.println("Le Robot a reculï¿½ une fois vers le NORD.");
 			break;
 			case 1: 
 				this.x = this.x - 1;
-				System.out.println("Le Robot a reculé une fois vers l'EST.");
+				System.out.println("Le Robot a reculï¿½ une fois vers l'EST.");
 			break;
 			case 2: 
 				this.y = this.y + 1;
-				System.out.println("Le Robot a reculé une fois vers le SUD.");
+				System.out.println("Le Robot a reculï¿½ une fois vers le SUD.");
 			break;
 			case 3: 
 				this.x = this.x + 1;
-				System.out.println("Le Robot a reculé une fois vers l'OUEST.");
+				System.out.println("Le Robot a reculï¿½ une fois vers l'OUEST.");
 			default :
 			System.out.println("Votre saisie est incorrecte !!!!");
 				
