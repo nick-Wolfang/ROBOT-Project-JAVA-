@@ -5,6 +5,7 @@ public class AppRobot {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ROBOT_CLASS n = new ROBOT_CLASS("Nick");
+		RobotNG n2 = new RobotNG("Labo", 1, 2, 4);
 		n.Menu();
 		Scanner sc = new Scanner(System.in);
 			int choix = sc.nextInt();
@@ -39,7 +40,11 @@ public class AppRobot {
 				Scanner sc3 = new Scanner(System.in);
 				String txt3 = sc3.nextLine();
 				if(txt3.equals("NON"))
-					System.out.println("Aurevoir PETIT ;)");
+					System.out.println("Aurevoir Mec ;)");
+				break;
+			case 5:
+				n2.tournerGauche();
+				System.out.println("Le Robot vient de faire un super tour à gauche");
 			}
 	
 
